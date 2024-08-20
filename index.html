@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary web app</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+<body class="light">
+    <header>
+        <div class="container">
+            <div class="logo"><img src="./assets/images/logo.svg" alt="logo"></div>
+            <div class="toggle">
+                <div class="fonts">
+                    <div class="title">
+                        <span>serif</span>
+                        <i class="fa-solid fa-angle-down"></i>
+                    </div>
+                    <ul>
+                        <li data-font="Serif">Serif</li>
+                        <li data-font="Sans-Serif">Sans Serif</li>
+                        <li data-font="Mono">Mono</li>
+                    </ul>
+                </div>
+                <div class="theme">
+                    <div class="bullet-container">
+                        <button class="bullet light-btn"></button>
+                        <button class="bullet dark-btn"></button>
+                    </div>
+                    <img src="./assets/images/icon-moon.svg" alt="">
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <div class="container">
+            <div class="search-container">
+                <form>
+                    <input type="text" placeholder="Search">
+                    <button>
+                        <img src="./assets/images/icon-search.svg" alt="search icon">
+                    </button>
+                </form>
+            </div>
+            <div class="speeling-container">
+                <div class="phonems">
+                    <h2>keyboard</h2>
+                    <p>/ˈkiːbɔːd/</p>
+                </div>
+                <div class="sound">
+                    <audio src="" controls></audio>
+                    <button>
+                        <img src="./assets/images/icon-play.svg" alt="play">
+                    </button>
+                </div>
+            </div>
+            <div class="deffinitions">
+                <div class="deffinition noun">
+                    <div class="head">
+                        <h3>noun</h3>
+                        <div class="line"></div>
+                    </div>
+                    <h4><small>meaning</small></h4>
+                    <div class="all-meaning all-meaning-noun">
+                        <!-- <div class="meaning">
+                            <div class="dot"></div>
+                            <p>Something of the smallest possible extent; an indivisible unit.</p>
+                        </div>
+                        <div class="meaning">
+                            <div class="dot"></div>
+                            <p>Something of the smallest possible extent; an indivisible unit.</p>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="deffinition synonyms">
+                    <small>synonyms</small>:
+                    <span class="synonyms-container">
+                        <!-- <span>synon</span>,
+                        <span>synon</span>,
+                        <span>synon</span> -->
+                    </span>
+                </div>
+                <div class="deffinition verb">
+                    <div class="head">
+                        <h3>verb</h3>
+                        <div class="line"></div>
+                    </div>
+                    <h4><small>meaning</small></h4>
+                    <div class="all-meaning all-meaning-verb">
+                        <!-- <div class="meaning">
+                            <div class="dot"></div>
+                            <p></p>
+                        </div>
+                        <div class="meaning">
+                            <div class="dot"></div>
+                            <p>Used for forming superlatives of adjectives, especially those that do not form the superlative by adding -est.</p>
+                        </div>
+                        <div class="meaning">
+                            <div class="dot"></div>
+                            <p>Used for forming superlatives of adjectives, especially those that do not form the superlative by adding -est.</p>
+                        </div> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        Coded By <a href="https://github.com/elasri21" target="_blank">elasri21</a>
+    </footer>
+    <script type="module" src="main.js"></script>
+</body>
+</html>

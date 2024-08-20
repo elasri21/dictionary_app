@@ -1,0 +1,369 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+}
+
+button, input {
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  transition: .3s linear;
+}
+
+a {
+  text-decoration: none;
+  transition: .3s linear;
+}
+
+.container {
+  margin: 0 30px;
+}
+@media (min-width: 1200px) {
+  .container {
+    margin: 0 100px !important;
+  }
+}
+@media (min-width: 922px) and (max-width: 1199px) {
+  .container {
+    margin: 0 70px !important;
+  }
+}
+@media (min-width: 768px) and (max-width: 921px) {
+  .container {
+    margin: 0 50px !important;
+  }
+}
+
+body {
+  font-family: sans-serif;
+  min-height: 100vh;
+  padding-bottom: 50px;
+  margin-bottom: 20px;
+}
+body.light {
+  background-color: #FFFFFF;
+}
+body.dark {
+  background-color: #151515;
+}
+
+body header {
+  padding: 30px 0;
+  margin-bottom: 20px;
+}
+body header .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+}
+body header .container .toggle {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+body header .container .toggle .fonts {
+  position: relative;
+}
+body header .container .toggle .fonts .title {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+body header .container .toggle .fonts .title span {
+  font-size: 18px;
+  font-weight: 400;
+  color: #2D2D2D;
+  text-transform: capitalize;
+}
+body header .container .toggle .fonts .title i {
+  cursor: pointer;
+  color: #A445ED;
+}
+body header .container .toggle .fonts ul {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  position: absolute;
+  right: 70%;
+  top: 100%;
+  width: 130px;
+  padding: 15px 20px;
+  border-radius: 10px;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 3px #00000033;
+  opacity: 0;
+  transition: opacity .3s linear;
+  z-index: 111;
+}
+body header .container .toggle .fonts ul li {
+  display: block;
+  width: 100%;
+  text-transform: capitalize;
+  cursor: pointer;
+  font-size: 18px;
+  color: #2D2D2D;
+  transition: .3s linear;
+}
+body header .container .toggle .fonts ul li:hover {
+  color: #A445ED;
+}
+body header .container .toggle .fonts:hover ul {
+  opacity: 1;
+}
+body header .container .toggle .theme {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+body header .container .toggle .theme .bullet-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2px 3px;
+  width: 55px;
+  height: 27px;
+  border-radius: 20px;
+  background-color: #979797;
+  cursor: pointer;
+}
+body header .container .toggle .theme .bullet-container:hover {
+  background-color: #A445ED;
+}
+body header .container .toggle .theme .bullet-container button {
+  width: 23px;
+  height: 23px;
+  border-radius: 50%;
+  background-color: #e9e9e9;
+  transition: opacity .3s linear;
+}
+body header .container .toggle .theme .bullet-container button.dark-btn {
+  opacity: 0;
+}
+body header .container .toggle .theme .bullet-container::before {
+  content: "";
+  width: 1px;
+  height: 25px;
+  background-color: #e9e9e9;
+  position: absolute;
+  left: -10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+body main {
+  margin-bottom: 40px;
+}
+body main .container .search-container {
+  position: relative;
+  margin-bottom: 50px;
+}
+body main .container .search-container input {
+  display: block;
+  width: 100%;
+  padding: 15px 40px 15px 20px;
+  border-radius: 10px;
+  background-color: #F4F4F4;
+  caret-color: #A445ED;
+  border: 2px solid transparent;
+  color: #2D2D2D;
+  font-size: 20px;
+  font-weight: 400;
+  transition: .3s linear;
+}
+body main .container .search-container input::placeholder {
+  transition: .3s linear;
+  color: #979797;
+}
+body main .container .search-container input:focus {
+  border-color: #A445ED;
+}
+body main .container .search-container input:focus::placeholder {
+  opacity: 0;
+}
+body main .container .search-container button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+body main .container .speeling-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+body main .container .speeling-container .phonems h2 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #2D2D2D;
+  text-transform: capitalize;
+  margin-bottom: 20px;
+}
+body main .container .speeling-container .phonems p {
+  font-size: 24px;
+  font-weight: 400;
+  color: #A445ED;
+  letter-spacing: .5px;
+}
+body main .container .speeling-container .sound {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+body main .container .speeling-container .sound audio {
+  position: absolute;
+  top: -100%;
+}
+body main .container .speeling-container .sound button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+body main .container .deffinitions {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+body main .container .deffinitions .deffinition {
+  width: 100%;
+}
+body main .container .deffinitions .deffinition .head {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 30px;
+}
+body main .container .deffinitions .deffinition .head h3 {
+  font-size: 30px;
+  font-weight: 600;
+  color: #2D2D2D;
+}
+body main .container .deffinitions .deffinition .head .line {
+  flex: 1;
+  height: 1px;
+  background-color: #e9e9e9;
+}
+body main .container .deffinitions .deffinition h4 {
+  margin-bottom: 25px;
+}
+body main .container .deffinitions .deffinition h4 small {
+  font-size: 24px;
+  font-weight: 200;
+  color: #979797;
+  text-transform: capitalize;
+}
+body main .container .deffinitions .deffinition .all-meaning {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-left: 40px;
+}
+body main .container .deffinitions .deffinition .all-meaning .meaning {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+body main .container .deffinitions .deffinition .all-meaning .meaning .dot {
+  margin-top: 5px;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #A445ED;
+}
+body main .container .deffinitions .deffinition .all-meaning .meaning p {
+  flex: 1;
+  font-size: 18px;
+  font-weight: 300;
+  color: #2D2D2D;
+  line-height: 18px;
+}
+body main .container .deffinitions .deffinition.synonyms {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+body main .container .deffinitions .deffinition.synonyms small {
+  font-size: 16px;
+  font-weight: 300;
+  color: #2D2D2D;
+}
+body main .container .deffinitions .deffinition.synonyms .synonyms-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px 0;
+}
+body main .container .deffinitions .deffinition.synonyms .synonyms-container span {
+  font-size: 16px;
+  margin-left: 5px;
+  font-weight: 600;
+  color: #A445ED;
+}
+body footer {
+  text-align: center;
+}
+body footer a {
+  font-size: 20px;
+  font-weight: 400;
+  color: #979797;
+}
+body footer a:hover {
+  color: #A445ED;
+}
+
+.dark header .container .toggle .fonts .title span {
+  color: #F2F2F2;
+}
+.dark header .container .toggle .fonts ul {
+  background-color: #151515;
+  box-shadow: 0 0 6px #A445ED;
+}
+.dark header .container .toggle .fonts ul li {
+  color: #FFFFFF;
+}
+.dark header .container .toggle .theme .bullet-container::before {
+  background-color: #979797;
+}
+.dark main .container .search-container input {
+  background-color: #1F1F1F;
+  color: #FFFFFF;
+}
+.dark main .container .speeling-container .phonems h2 {
+  color: #FFFFFF;
+}
+.dark main .container .deffinitions .deffinition .head h3 {
+  color: #FFFFFF;
+}
+.dark main .container .deffinitions .deffinition .head .line {
+  background-color: #979797;
+}
+.dark main .container .deffinitions .deffinition h4 small {
+  color: #979797;
+}
+.dark main .container .deffinitions .deffinition .all-meaning .meaning p {
+  color: #FFFFFF;
+}
+.dark main .container .deffinitions .deffinition.synonyms small {
+  color: #FFFFFF;
+}
+.dark footer {
+  color: #FFFFFF;
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,367 @@
+body {
+    header {
+        padding: 30px 0;
+        margin-bottom: 20px;
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 30px;
+            .toggle {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                .fonts {
+                    position: relative;
+                    .title {
+                        display: flex;
+                        align-items: center;
+                        gap: 10px;
+                        span {
+                            font-size: 18px;
+                            font-weight: 400;
+                            color: $font;
+                            text-transform: capitalize;
+                        }
+                        i {
+                            cursor: pointer;
+                            color: $purple;
+                        }
+                    }
+                    ul {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 15px;
+                        position: absolute;
+                        right: 70%;
+                        top: 100%;
+                        width: 130px;
+                        padding: 15px 20px;
+                        border-radius: 10px;
+                        background-color: $white;
+                        box-shadow: 0 0 3px $box-shadow;
+                        opacity: 0;
+                        transition: opacity .3s linear;
+                        z-index: 111;
+                        li {
+                            display: block;
+                            width: 100%;
+                            text-transform: capitalize;
+                            cursor: pointer;
+                            font-size: 18px;
+                            color: $font;
+                            transition: .3s linear;
+                            &:hover {
+                                color: $purple;
+                            }
+                        }
+                    }
+                    &:hover {
+                        ul {
+                            opacity: 1;
+                        }
+                    }
+                }
+                .theme {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    .bullet-container {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+                        padding: 2px 3px;
+                        width: 55px;
+                        height: 27px;
+                        border-radius: 20px;
+                        background-color: $theme-bg;
+                        cursor: pointer;
+                        &:hover {
+                            background-color: $purple;
+                        }
+                        button {
+                            width: 23px;
+                            height: 23px;
+                            border-radius: 50%;
+                            background-color: $line;
+                            transition: opacity .3s linear;
+                            &.dark-btn {
+                                opacity: 0;
+                            }
+                        }
+                        &::before {
+                            content: "";
+                            width: 1px;
+                            height: 25px;
+                            background-color: $line;
+                            position: absolute;
+                            left: -10px;
+                            top: 50%;
+                            transform: translateY(-50%);
+                        }
+                    }
+                }
+            }
+        }
+    
+    }
+    
+    main {
+        margin-bottom: 40px;
+        .container {
+            .search-container {
+                position: relative;
+                margin-bottom: 50px;
+                input {
+                    display: block;
+                    width: 100%;
+                    padding: 15px 40px 15px 20px;
+                    border-radius: 10px;
+                    background-color: $input-bg;
+                    caret-color: $purple;
+                    border: 2px solid transparent;
+                    color: $font;
+                    font-size: 20px;
+                    font-weight: 400;
+                    transition: .3s linear;
+                    &::placeholder {
+                        transition: .3s linear;
+                        color: $theme-bg;
+                    }
+                    &:focus {
+                        border-color: $purple;
+                        &::placeholder {
+                            opacity: 0;
+                        }
+                    }
+                }
+                button {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: fit-content;
+                    position: absolute;
+                    right: 20px;
+                    top: 50%;
+                    transform: translateY(-50%);
+                }
+            }
+            .speeling-container {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                flex-wrap: wrap;
+                gap: 30px;
+                margin-bottom: 40px;
+                .phonems {
+                    h2 {
+                        font-size: 40px;
+                        font-weight: 700;
+                        color: $font;
+                        text-transform: capitalize;
+                        margin-bottom: 20px;
+                    }
+                    p {
+                        font-size: 24px;
+                        font-weight: 400;
+                        color: $purple;
+                        letter-spacing: .5px;
+                    }
+                }
+                .sound {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    audio {
+                        position: absolute;
+                        top: -100%;
+                    }
+                    button {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        width: 60px;
+                        height: 60px;
+                        border-radius: 50%;
+                        overflow: hidden;
+                    }
+    
+                }
+            }
+            .deffinitions {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                .deffinition {
+                    width: 100%;
+                    .head {
+                        display: flex;
+                        align-items: center;
+                        gap: 50px;
+                        margin-bottom: 30px;
+                        h3 {
+                            font-size: 30px;
+                            font-weight: 600;
+                            color: $font;
+                        }
+                        .line {
+                            flex: 1;
+                            height: 1px;
+                            background-color: $line;
+                        }
+                    }
+                    h4 {
+                        margin-bottom: 25px;
+                        small {
+                            font-size: 24px;
+                            font-weight: 200;
+                            color: $theme-bg;
+                            text-transform: capitalize;
+                        }
+                    }
+                    .all-meaning {
+                        display: flex;
+                        flex-direction: column;
+                        gap: 30px;
+                        padding-left: 40px;
+                        .meaning {
+                            display: flex;
+                            align-items: flex-start;
+                            gap: 10px;
+                            .dot {
+                                margin-top: 5px;
+                                width: 5px;
+                                height: 5px;
+                                border-radius: 50%;
+                                background-color: $purple;
+                            }
+                            p {
+                                flex: 1;
+                                font-size: 18px;
+                                font-weight: 300;
+                                color: $font;
+                                line-height: 18px;
+                            }
+                        }
+                    }
+                    &.synonyms {
+                        display: flex;
+                        align-items: center;
+                        flex-wrap: wrap;
+                        gap: 10px;
+                        small {
+                            font-size: 16px;
+                            font-weight: 300;
+                            color: $font;
+                        }
+                        .synonyms-container {
+                            display: flex;
+                            flex-wrap: wrap;
+                            gap: 15px 0;
+                            span {
+                                font-size: 16px;
+                                margin-left: 5px;
+                                font-weight: 600;
+                                color: $purple;
+                            }
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+    
+    footer {
+        text-align: center;
+        a {
+            font-size: 20px;
+            font-weight: 400;
+            color: $theme-bg;
+            &:hover {
+                color: $purple;
+            }
+        }
+    }
+}
+.dark {
+    header {
+        .container {
+            .toggle {
+                .fonts {
+                    .title {
+                        span {
+                            color: $dark-theme-font;
+                        }
+                    }
+                    ul {
+                        background-color: $dark-theme-background;
+                        box-shadow: 0 0 6px $purple;
+                        li {
+                            color: $white;
+                        }
+                    }
+                }
+                .theme {
+                    .bullet-container {
+                        &::before {
+                            background-color: $theme-bg;
+                        }
+                    }
+                }
+            }
+        }
+    
+    }
+    
+    main {
+        .container {
+            .search-container {
+                input {
+                    background-color: $dark-theme-input-bg;
+                    color: $white;
+                }
+            }
+            .speeling-container {
+                .phonems {
+                    h2 {
+                        color: $white;
+                    }
+                }
+            }
+            .deffinitions {
+                .deffinition {
+                    .head {
+                        h3 {
+                            color: $white;
+                        }
+                        .line {
+                            background-color: $theme-bg;
+                        }
+                    }
+                    h4 {
+                        small {
+                            color: $theme-bg;
+                        }
+                    }
+                    .all-meaning {
+                        .meaning {
+                            p {
+                                color: $white;
+                            }
+                        }
+                    }
+                    &.synonyms {
+                        small {
+                            color: $white
+                        }
+                    }
+                }
+            }
+        }
+    }
+    
+    footer {
+        color: $white;
+    }
+}

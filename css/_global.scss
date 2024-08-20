@@ -1,0 +1,44 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+ul {
+    list-style: none;
+}
+button, input {
+    border: none;
+    outline: none;
+    background: none;
+    cursor: pointer;
+    transition: .3s linear;
+}
+a {
+    text-decoration: none;
+    transition: .3s linear;
+}
+.container {
+    @media (min-width: 1200px) {
+        margin: 0 100px !important;
+    }
+    @media (min-width: 922px) and (max-width: 1199px) {
+        margin: 0 70px !important;
+    }
+    @media (min-width: 768px) and (max-width: 921px) {
+        margin: 0 50px !important;
+    }
+    margin: 0 30px;
+}
+body {
+    font-family: sans-serif;
+    min-height: 100vh;
+    padding-bottom: 50px;
+    margin-bottom: 20px;
+    &.light {
+        background-color: $white;
+    }
+    &.dark {
+        background-color: $dark-theme-background;
+    }
+}
