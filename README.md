@@ -36,8 +36,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Click here]()
-- Live Site URL: [Click here]()
+- Solution URL: [Click here](https://github.com/elasri21/dictionary_app)
+- Live Site URL: [Click here](https://elasri21.github.io/dictionary_app/)
 
 ## My process
 
@@ -50,13 +50,15 @@ Users should be able to:
 
 ## Author
 
-- linkedin - [@MarkosComK]()
+- linkedin - [Elasri Mohamed](https://www.linkedin.com/in/mohamed-elasri-a4ab8815a/)
   <br>
-- Github - [MarkosComK]()
+- Github - [elasri21](https://github.com/elasri21)
   <br>
-- Frontend Mentor - [@MarkosComK]()
+- Frontend Mentor - [elasri21](https://www.frontendmentor.io/profile/elasri21)
   <br>
-- instagram - [@MarkosComK]()
+- instagram - [@simo5904](https://www.instagram.com/simo5904/)
+- Twitter - [Elasri Mohamed](https://x.com/ELASRI08455745)
+- Facebook - [Elasri Mohamed](https://web.facebook.com/simo.asri.378)
   <br>
 
 ## Final considerations
